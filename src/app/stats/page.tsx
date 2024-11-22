@@ -1,5 +1,11 @@
+import StatsTable from "@/components/statsTable/statsTable";
+
 const Stats = () => {
-  return <div>Hello Stats!</div>;
+  return (
+    <div>
+      <StatsTable />
+    </div>
+  );
 };
 
 export default Stats;

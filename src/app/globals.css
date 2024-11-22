@@ -1,21 +1,28 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700&display=swap");
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
-
 body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: "Open Sans", sans-serif;
+  background-color: #1a1a1a;
+  margin: 0;
+  padding: 0;
+}
+
+@layer components {
+  .stats-table-header {
+    @apply p-3 text-xs text-[#bfbfbf] text-center font-bold border-b-2 border-[#444] uppercase tracking-wider;
+  }
+
+  .stats-table-cell {
+    @apply p-3 text-gray-100 border-b border-[#444] text-center hover:text-white;
+  }
+
+  .search-input {
+    @apply bg-[#191919] border border-transparent text-gray-400 rounded-lg p-2.5 
+           transition-all duration-300 hover:bg-[#1a1a1a] hover:border-[#8fa3d9] 
+           hover:shadow-[0_4px_12px_#8fa3d9] w-full md:w-[200px];
+  }
 }
